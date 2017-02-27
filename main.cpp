@@ -48,7 +48,15 @@ int main()
         string runAgain;
         locale loc;
 
-        cout << "Welcome to the random number generator.\n" << endl;
+        cout << "--------------------------------------\n"
+          "Welcome to the random number generator! \n"
+          "--------------------------------------\n"
+          "This program takes a max value for a random number (between 1 and your input) \n"
+          "and a # of times to randomly generate numbers. The data is represented by \n"
+          "10 evenly distributed ranges on a histogram. Each symbol represents a # of \n"
+          "occurances in that particular range based on the generated numbers. \n\n"
+          "Larger quantites of numbers generally tend to be more consistent, while \n"
+          "smaller quantities have more opportunity to represent diverse ranges. \n" << endl;
 
         /*
          * BUG: sometimes when a range is given with a starting value
@@ -72,7 +80,7 @@ int main()
         }
         */
 
-        cout << "Enter a MAXIMUM range for the random number generator. (min is " << rangeRngMin << ") \nSUGGESTED: 100." << endl;
+        cout << "Enter a MAXIMUM range for the random number generator. \nSUGGESTED: 100." << endl;
         for (;;) {
             cin >> rangeRngMax;
             if (!cin.good() || rangeRngMax < 10 || rangeRngMax > 32000 || rangeRngMax <= rangeRngMin || (rangeRngMax - rangeRngMin) < 99) {
@@ -94,7 +102,7 @@ int main()
          * Another solution is to create an exception for when an input is < 200 and resort to a
          * value which will not crash the program.
         */
-        cout << "How many values would you like to generate? \nSUGGESTED: 10000." << endl;
+        cout << "How many values would you like to generate? \nSUGGESTED: 10000. MIN: 200." << endl;
         for (;;) {
             cin >> rangeQuantityMax;
             if (!cin.good() || rangeQuantityMax < 200) {
