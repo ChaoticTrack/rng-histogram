@@ -305,6 +305,7 @@ int main()
             } else {
                 if (runAgain == "n") {
                     running = 0;
+                    cout << "\n## Peyton Seigo. February 26, 2017. ##" << endl;
                 } else {
                     running = 1;
                     cout << endl;
